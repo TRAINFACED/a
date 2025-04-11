@@ -1,0 +1,14 @@
+name: Dispatch Metadata
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  dispatch:
+    uses: your-org/repo-b/.github/workflows/relay-to-metadata.yml@main
+    with:
+      tag: ${{ github.ref_name }}
+    secrets:
+      METADATA_PAT: ${{ secrets.METADATA_PAT }}
