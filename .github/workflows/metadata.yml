@@ -7,7 +7,7 @@ on:
 
 jobs:
   dispatch:
-    uses: TRAINFACED/b/.github/workflows/relay-to-metadata.yml@main
+    uses: TRAINFACED/b/.github/workflows/on-tag.yml@main
     with:
       tag: ${{ github.ref_name }}
     secrets:
