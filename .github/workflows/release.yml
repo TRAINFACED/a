@@ -6,17 +6,8 @@ on:
       - '*'
 
 jobs:
-  release:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Upload container metadata to GitHub release
-        run: gh release upload "${GITHUB_REF##*/}" images.json --clobber
-        env:
-          GITHUB_TOKEN: ${{ secrets.METADATA_PAT }}
-
   dispatch:
-    needs: release
+    # needs: release
     uses: TRAINFACED/b/.github/workflows/on-tag.yml@main
     with:
         tag: ${{ github.ref_name }}
