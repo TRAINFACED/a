@@ -2,7 +2,7 @@ name: Dispatch Metadata
 
 on:
   workflow_run:
-    workflows: ["release"]
+    workflows: ["Release"]
     types:
       - completed
 
