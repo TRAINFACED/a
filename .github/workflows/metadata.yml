@@ -1,4 +1,4 @@
-name: Dispatch Metadata
+name: dispatch
 
 on:
   workflow_run:
