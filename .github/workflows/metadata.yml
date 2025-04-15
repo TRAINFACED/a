@@ -2,7 +2,7 @@ name: Dispatch Metadata
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   dispatch:
