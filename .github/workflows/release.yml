@@ -13,4 +13,4 @@ jobs:
       - name: Upload container metadata to GitHub release
         run: gh release upload "${GITHUB_REF##*/}" images.json --clobber
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.METADATA_PAT }}
